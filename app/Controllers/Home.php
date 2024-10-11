@@ -4,11 +4,15 @@ namespace App\Controllers;
 
 class Home extends BaseController
 {
-    public function index()
+      public function index()
     {
-        $data['content']=view('home/content/homepage');
-        return view('home/index', $data);
+        return view('welcome_message');
     }
+    // public function index()
+    // {
+    //     $data['content']=view('home/content/homepage');
+    //     return view('home/index', $data);
+    // }
   function menu(){
       $model = new \App\Models\MdlPages();
       $where = ['id !=' => 0, 'deleted_at'=>NULL];
